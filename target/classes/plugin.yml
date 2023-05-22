@@ -1,0 +1,37 @@
+name: AquariumHub
+version: '1.0'
+main: it.aquariumstudios.aquariumhub.AquariumHub
+author: "SonoRicky"
+commands:
+  gmc:
+    aliases: [ gm1 ]
+  gmsp:
+    aliases: [ gm3 ]
+  gms:
+    aliases: [ gm0 ]
+  tp:
+    aliases: [ teleport ]
+  tpall:
+    aliases: [  ]
+  tphere:
+    aliases: [  ]
+  alert:
+    aliases: [ avviso, global ]
+  discord:
+    aliases: [ ds ]
+  fly:
+    aliases: [  ]
+  invsee:
+    aliases: [ inv ]
+  aquariumhub:
+    aliases: [ hub, core, lobby, aquarium ]
+  setspawn:
+    aliases: [  ]
+  spawn:
+    aliases: [  ]
+  store:
+    aliases: [ vip, buy, sito, compra ]
+  vanish:
+    aliases: [ v ]
+  vote:
+    aliases: [ vota ]

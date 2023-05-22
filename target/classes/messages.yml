@@ -1,0 +1,63 @@
+player-only: "&cComando eseguibile solo dai player."
+no-permission: "&cNon hai il permesso."
+
+spawn:
+  no-spawn-found: "&cPunto di spawn non trovato, contatta un'admin."
+  new-spawn-set: "&aNuovo punto di spawn impostato correttamente."
+
+alert:
+  usage: "&7Usa: &f/alert <messaggio>"
+
+social:
+  discord: "&9DISCORD: &7discord.ServerMC.it"
+  store: "&aSITO: &7store.ServerMC.it"
+  vote: "&fVOTA: &7vota.ServerMC.it"
+  list: "&9DISCORD: &7discord.server.it\n &aSITO: &7store.server.it\n &fVOTA: &7vota.server.it"
+
+fly:
+  disabled: "&cFly disabilitata."
+  enabled: "&aFly abilitata."
+  disabled-for-player: "&7Hai disabilitato la fly di &f%name%."
+  disabled-by-staff: "&7La tua fly è stata disabilitata da &f%name%."
+  enabled-for-player: "&7Hai abilitato la fly di &f%name%."
+  enabled-by-staff: "&7La tua fly è stata abilitata da &f%name%."
+
+vanish:
+  enabled: "&aVanish abilitata."
+  disabled: "&cVanish disabilitata."
+  enabled-for-player: "&7Vanish abilitata per &f%name%&7."
+  disabled-for-player: "&7Vanish disabilitata per &f%name%&7."
+  enabled-by-staff: "&7Vanish abilitata da &f%name%&7."
+  disabled-by-staff: "&7Vanish disabilitata da &f%name%&7."
+
+gamemodes:
+  creative: "&7Modalità impostata su &bCREATIVA&7."
+  creative-for-player: "&7Modalità impostata su &bCREATIVA &7per &f%name%&7."
+  creative-by-staff: "&7Modalità impostata su &bCREATIVA &7da &f%name%&7."
+
+  spectator: "&7Modalità impostata su &dSPECTATOR&7."
+  spectator-for-player: "&7Modalità impostata su &dSPECTATOR &7per &f%name%&7."
+  spectator-by-staff: "&7Modalità impostata su &dSPECTATOR &7da &f%name%&7."
+
+  survival: "&7Modalità impostata su &aSURVIVAL&7."
+  survival-for-player: "&7Modalità impostata su &aSURVIVAL &7per &f%name%&7."
+  survival-by-staff: "&7Modalità impostata su &aSURVIVAL &7da &f%name%&7."
+
+teleport:
+  usage: "&7Usa: &f/tp <player>\n&7Oppure usa: &f/tp <player> <player>"
+  tp-yourself-error: "&cNon puoi teletrasportarti da te stesso."
+  success: "&7Ti sei teletrasportato da &f%name%&7."
+  tp-other-self: "&cNon puoi teletrasportare un player da se stesso."
+  success-different: "&7Hai teletrasportato &f%name% &7da &f%target%7."
+
+tphere:
+  usage: "&7Usa: &f/tphere <player>"
+  success: "&7Hai teletrasportato da te &f%name%&7."
+  tp-yourself-error: "&cNon puoi teletrasportarti da te stesso."
+
+tpall:
+  success: "&aTutti i giocatori sono stati teletrasportati da te correttamente."
+
+invsee:
+  usage: "&7Usa: &f/invsee <Player>"
+  success: "&7Hai aperto l'inventario di &f%name%."
