@@ -1,6 +1,7 @@
 package it.aquariumstudios.aquariumhub.listeners;
 
 import it.aquariumstudios.aquariumhub.AquariumHub;
+import it.aquariumstudios.aquariumhub.commands.SpawnCommand;
 import it.aquariumstudios.aquariumhub.utils.ChatUtils;
 import org.bukkit.entity.*;
 import org.bukkit.event.*;
@@ -29,9 +30,17 @@ public class PlayerListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         event.setJoinMessage(null);
         Player player = event.getPlayer();
+        Location spawn = (Location) AquariumHub.getFileManager().getConfig().get("spawn-location");
+
+        if (spawn == null) {
+            return;
+        } else {
+            player.teleport(spawn);
+        }
+
         player.getInventory().clear();
         Inventory inv = player.getInventory();
-        inv.setItem(1, this.createItem(Material.BOOK, "§dSocial", "§7Clicca per visualizzare §7tutti i nostri social", true, 1));
+        inv.setItem(8, this.createItem(Material.BOOK, "§dSocial", "§7Clicca per visualizzare §7tutti i nostri social", true, 1));
         inv.setItem(0, this.createItem(Material.SANDSTONE, "§eBlocchi", "§7Si rimuovono automaticamente §7dopo 10 secondi", true, 64));
         inv.setItem(7, this.createItem(Material.TORCH, "§cNascondi giocatori §7(Tasto destro)", "§7Clicca per nascondere §7i giocatori", true, 1));
     }

@@ -22,14 +22,15 @@ public class TeleportCommand implements CommandExecutor {
         }
 
         Player player = (Player) sender;
-        Player target = Bukkit.getPlayerExact(args[0]);
 
         if (args.length == 0) {
             player.sendMessage(ChatUtils.getFormattedText("teleport.usage"));
             return true;
 
         } else if (args.length == 1) {
-            if (Bukkit.getPlayerExact(args[0]) == null) {
+            Player target = Bukkit.getPlayerExact(args[0]);
+
+            if (target == null) {
                 player.sendMessage(ChatUtils.getFormattedText("player-offline"));
                 return true;
             }
@@ -46,9 +47,15 @@ public class TeleportCommand implements CommandExecutor {
 
         if (player.hasPermission("aquariumhub.tp.other")) {
             if (args.length == 2) {
+                Player target = Bukkit.getPlayerExact(args[0]);
                 Player target2 = Bukkit.getPlayerExact(args[1]);
 
-                if (Bukkit.getPlayerExact(args[1]) == null) {
+                if (target == null) {
+                    player.sendMessage(ChatUtils.getFormattedText("player-offline"));
+                    return true;
+                }
+
+                if (target2 == null) {
                     player.sendMessage(ChatUtils.getFormattedText("player-offline"));
                     return true;
                 }

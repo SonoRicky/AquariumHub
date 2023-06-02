@@ -1,4 +1,5 @@
 player-only: "&cComando eseguibile solo dai player."
+player-offline: "&cIl player non è online."
 no-permission: "&cNon hai il permesso."
 
 spawn:

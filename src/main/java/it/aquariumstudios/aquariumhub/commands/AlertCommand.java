@@ -21,7 +21,7 @@ public class AlertCommand implements CommandExecutor {
         }
 
         String message = String.join(" ", args);
-        Bukkit.broadcastMessage("&7[&cAvviso&7]: &f" + message);
+        Bukkit.broadcastMessage(ChatUtils.getColoredText("&7[&cAvviso&7]: &f" + message));
         return true;
     }
 }

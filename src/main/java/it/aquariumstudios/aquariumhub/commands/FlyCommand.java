@@ -36,6 +36,18 @@ public class FlyCommand implements CommandExecutor {
 
         Player target = Bukkit.getPlayerExact(args[0]);
 
+        if (target == player) {
+            if (player.getAllowFlight()) {
+                player.setAllowFlight(false);
+                player.sendMessage(ChatUtils.getFormattedText("fly.disabled"));
+                return true;
+            } else {
+                player.setAllowFlight(true);
+                player.sendMessage(ChatUtils.getFormattedText("fly.enabled"));
+                return true;
+            }
+        }
+
         if (!target.isOnline()) {
             player.sendMessage(ChatUtils.getFormattedText("player-offline"));
             return true;
@@ -44,7 +56,7 @@ public class FlyCommand implements CommandExecutor {
                 target.setAllowFlight(false);
                 player.sendMessage(ChatUtils.getFormattedText("fly.disabled-for-player")
                         .replaceAll("%name%", target.getName()));
-                target.sendMessage(ChatUtils.getFormattedText("fly-disabled-by-staff")
+                target.sendMessage(ChatUtils.getFormattedText("fly.disabled-by-staff")
                         .replaceAll("%name%", player.getName()));
                 return true;
             } else {
